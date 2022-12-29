@@ -33,10 +33,16 @@ Perform an experiment to integrate the microphone with the classifier to perform
 Keyword spotting(KWS) is a critical component for enabling speech based user interactions on smart devices. It requires real-time response and high accuracy for good user experience. Recently, neural networks have become an attractive choice for KWS architecture because of their superior accuracy compared to traditional speech processing algorithms. In previous work on keyword spotting on microcontrollers, the neural network architecture evaluation and exploration for running KWS on resource-constrained microcontrollers is performed. Trained various neural network architectures for keyword spotting published in literature to compare the accuracy and memory or compute requirements. The work has shown that it is possible to optimize the neural network architecture to fit within the memory and compute constraints of microcontrollers without sacrificing accuracy.
 
 ## 4.0 On-Axis Frequency Response
+![image](https://user-images.githubusercontent.com/92903308/209988352-1c8fbe66-d4de-479a-956f-b9c9cf46e7d0.png)
+
+![image](https://user-images.githubusercontent.com/92903308/209988403-8de28f1f-e491-4ee8-aac0-bb9800cd5e3b.png)
 
 
 ## 5.0 Polar Frequency Responses
 
+The figure below shows the overall flow of the data. At first, the sound is collected with an inmp441 esp32 microphone. Then, the sound data is populated into the NUCLEO-F446RE board through the SAI ports enabled. SAI is a protocol that allows the stm32 microcontroller to communicate with audio devices and the other ADC/DAC. In this project, SAI serves as the agent to convert sound data to digital bits to be analyzed by the classifier in the microcontroller.
+
+![image](https://user-images.githubusercontent.com/92903308/209988520-411d8803-7295-4f93-96db-7403fe5f0e97.png)
 
 ## 6.0 Acoustic Effects of Mounting AudioMoth on Trees
 
