@@ -6,18 +6,17 @@
 
 [1.0 Introduction](#10-introduction)
 
-[2.0 Objective](#20-testing-methodology)
+[2.0 Objective](#20-objective)
 
-[3.0 Previous Works](#30-audiomoth-gain-settings)
+[3.0 Previous Works](#30-previous-works)
 
-[4.0 Use Cases](#40-on-axis-frequency-response)
+[4.0 Use Cases](#40-use-cases)
 
-[5.0 System Architecture](#50-polar-frequency-responses)
+[5.0 System Architecture](#50-system-architecture)
 
-[6.0 Algorithm](#60-acoustic-effects-of-mounting-audiomoth-on-trees)
+[6.0 Algorithm](#60-algorithm)
 
-
-[7.0 References](#60-acoustic-effects-of-mounting-audiomoth-on-trees)
+[7.0 References](#60-references)
 
 
 ## 1.0 Introduction
