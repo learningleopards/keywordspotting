@@ -17,6 +17,8 @@
 [6.0 Algorithm](#60-acoustic-effects-of-mounting-audiomoth-on-trees)
 
 
+[7.0 References](#60-acoustic-effects-of-mounting-audiomoth-on-trees)
+
 
 ## 1.0 Introduction
 
