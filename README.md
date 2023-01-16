@@ -16,7 +16,9 @@
 
 [6.0 Algorithm](#60-algorithm)
 
-[7.0 References](#70-references)
+[7.0 Discussion](#70-discussion)
+
+[8.0 References](#80-references)
 
 
 ## 1.0 Introduction
