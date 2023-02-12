@@ -43,14 +43,14 @@ Keyword spotting(KWS) is a critical component for enabling speech based user int
 ## 4.0 Use Cases
 ![image](https://user-images.githubusercontent.com/92903308/209988352-1c8fbe66-d4de-479a-956f-b9c9cf46e7d0.png)
 
-![image](https://user-images.githubusercontent.com/92903308/209988403-8de28f1f-e491-4ee8-aac0-bb9800cd5e3b.png)
+![image](https://user-images.githubusercontent.com/92903308/218308575-bde17ad5-aee7-4522-96dd-80b1e11d110e.png)
 
 
 ## 5.0 System Architecture
 
-The figure below shows the overall flow of the data. At first, the sound is collected with Microphone Sensor Module KY-037 High Sensitivity Module Sound Detection. Then, the sound data is populated into the NUCLEO-F446RE board through the SAI ports enabled. SAI is a protocol that allows the STM32 microcontroller to communicate with audio devices and the other ADC/DAC. In this project, SAI serves as the agent to convert sound data to digital bits to be analyzed by the classifier in the microcontroller.
+The figure below shows the overall flow of the data. At first, the sound is collected with INMP 441 Microphone. Then, the sound data is populated into the NUCLEO-F446RE board through the SAI ports enabled. SAI is a protocol that allows the STM32 microcontroller to communicate with audio devices and the other ADC/DAC. In this project, SAI serves as the agent to convert sound data to digital bits to be analyzed by the classifier in the microcontroller.
 
-![image](https://user-images.githubusercontent.com/92903308/209988520-411d8803-7295-4f93-96db-7403fe5f0e97.png)
+![image](https://user-images.githubusercontent.com/92903308/218308607-84037bb5-3e43-4eb6-a5de-4d3d50a50421.png)
 
 ## 6.0 Algorithm
 
