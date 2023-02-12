@@ -68,7 +68,7 @@ In data acquisition, 61 audio files are uploaded to Edge Impulse for processing.
 
 **Figure 1: Upload existing data**
 
-Figure 2 shows the separation of training data and test data with 6 labels. For audio dataset, the data collected value is shown as total time length. 
+Figure 2 shows the separation of training data and test data. For audio dataset, the data collected value is shown as total time length. 
 ![WhatsApp Image 2023-02-12 at 3 27 39 PM (1)](https://user-images.githubusercontent.com/92903308/218304548-87185e5c-1f0c-4d8a-9cdf-5d58bcabae5e.jpeg)
 
 **Figure 2: Data Acquisition**
@@ -161,7 +161,7 @@ Figure 14 shows the training process that is run by the model. Figure 15 shows t
 
 Model testing
 
-In model testing, 61 audio data from different classes are included to test the accuracy of the model. Figure 16 shows the result of model testing where the accuracy is . 
+In model testing, 61 audio data from different classes are included to test the accuracy of the model. Figure 16 shows the result of model testing where the accuracy is 42.59%. 
 
 ![WhatsApp Image 2023-02-12 at 3 27 43 PM (1)](https://user-images.githubusercontent.com/92903308/218305725-858fd0ee-345f-4e9b-9194-6c9e7aa64c33.jpeg)
 
@@ -170,13 +170,13 @@ In model testing, 61 audio data from different classes are included to test the 
 
 Retrain Model
 
-In the retrain model, the model will be retrained with known parameters to improve the performance of the model and reduce loss. The result of the retrain model is shown as Figure 19. In addition, the accuracy of testing is improved after retraining the model. Figure 20 shows the result of testing, where the improvement is . 
+In the retrain model, the model will be retrained with known parameters to improve the performance of the model and reduce loss. The result of the retrain model is shown as Figure 17.  
 
 ![WhatsApp Image 2023-02-12 at 4 26 52 PM](https://user-images.githubusercontent.com/92903308/218305689-d5717a42-87fa-4fd7-8cba-239b1720bc9d.jpeg)
 
 **Figure 17: Test data after retrain model**
 
-The confusion matrix after retraining the model. After retraining the model, the model now performs better on recognizing “”, “”, “”, “” and “”.
+The confusion matrix after retraining the model.
 
 Deployment
 
@@ -190,20 +190,19 @@ At last, the source code needs to be copied to the working directory of STMCubeI
 
 ## 8.0 Discussion
 
-Microphone is required to receive the real-time audio data.  The INMP441 is a high-performance, low power, digital output, omnidirectional MEMS microphone with a bottom port. Figure 29 shows the physical connection between INMP441 microphone and Nucleo-F446RE board. Table 4 tabulated the name and function of the pins respectively. However, the coding in Coding 1 is not working fine to print out any serial output in Putty. 
-The ideal implementation is that the classifier identifies the input sound from microphone and print the result of classification into serial monitor. If the sound detected is something dangerous like gun shot in the middle of a crowd, then LED would be light up, which will directly send a warning notification to security team so that they can act accordingly with the shortest response time. Figure 30 shows the snippet physical implementation on the application of environmental sound classifier using Nucleo-F446RE. The coding as shown in Coding 2 can print out the serial output in Putty. However, the microphone is not working fine to detect the real-time audio where the output in the serial port is always static.
+Microphone is required to receive the real-time audio data.  The INMP441 is a high-performance, low power, digital output, omnidirectional MEMS microphone with a bottom port. Figure 19 shows the physical connection between INMP441 microphone and Nucleo-F446RE board. Table 1 tabulated the name and function of the pins respectively. The coding can print out the serial output in Putty. However, the microphone is not detecting the sound fine to detect the real-time audio where the output in the serial port is always static. The most valuable experience obtained throughout this project, is the learning of stm32 microcontroller related knowledge, AI through edge impulse implementation and the co-operation of each team member to handle various issues faced. Figure 20 shows the snippet physical implementation on the application of environmental sound classifier using Nucleo-F446RE. The coding as shown in Coding 2 can print out the serial output in Putty. However, the microphone is not working fine to detect the real-time audio where the output in the serial port is always static.
 
 <img width="288" alt="image" src="https://user-images.githubusercontent.com/92903308/218306830-87f12c0c-525e-4ba8-b03d-60b1e4a98b0b.png">
 
-**Figure : INMP441 microphone**
+**Figure 19: INMP441 microphone**
 
-**Table 4: Function of pins**
+**Table 1: Function of pins**
 
 ![image](https://user-images.githubusercontent.com/92903308/218306872-679dfeaa-115d-4d7b-b146-52137e6856e9.png)
 
 ![WhatsApp Image 2023-02-12 at 4 17 22 PM](https://user-images.githubusercontent.com/92903308/218306951-fb00248e-5834-4768-bb94-29cefaca740d.jpeg)
 
-**Figure : The physical board implementation**
+**Figure 20: The physical board implementation**
 
 
 ## 9.0 Conclusion
