@@ -1,8 +1,8 @@
 # Keyword Spotting using Edge Impulse
 
-A quantitative report of keyword spotting using edge impulse
+**A quantitative report of keyword spotting using edge impulse**
 
-This report characterizes the keyword spotting using edge impulse
+_This report characterizes the keyword spotting using edge impulse_
 
 #### Table of contents
 
