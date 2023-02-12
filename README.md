@@ -71,6 +71,7 @@ Figure 2 shows the separation of training data and test data with 6 labels. For 
 **Figure 2: Data Acquisition**
 
 Impulse Design
+
 After that, the dataset is now ready to create impulse. Under the create impulse tab, the processing block and learning block are required to be defined. In the processing block, MFCC and Spectrogram are available for audio dataset. Figure 3 shows the available processing block in Edge Impulse. Spectrogram is using linear spaced frequency scale whereas MFCC is using quasi-logarithmic spaced frequency scale, which is more similar to how the human auditory system processes sounds [1]. MFCC is chosen due to its more distinguishable detail. Based on the research done, MFCC is more suitable to be applied on CNN models owing to its better result on validation and testing. Furthermore, there are three learning blocks available for different varieties of dataset. For example, Neural Network, Transfer Learning as well as K-mean Anomaly Detection. Figure 4 shows the available learning blocks in Edge Impulse. While Neural Network is chosen due to its great performance on recognizing audio. Last, the selected processing block and learning block need to be saved for the next stage process.
 ![WhatsApp Image 2023-02-12 at 3 27 39 PM (2)](https://user-images.githubusercontent.com/92903308/218304650-7d1d22e5-1727-4689-8574-ad1fc05861db.jpeg)
 
@@ -118,18 +119,23 @@ Next, define the Neural Network settings by modifying the number of training cyc
 **Figure 11: Neural Network settings**
 
 Input layer
-	Input layer is the layer that consists of all the initial data for a neural network. 
+
+Input layer is the layer that consists of all the initial data for a neural network. 
 
 Reshape layer
-	Reshape layer is a common practice to overcome the limitation of Neural Network which only accept the fixed size data. Hence, with the existing reshape layer the data could be fed into the networks [2].
+
+Reshape layer is a common practice to overcome the limitation of Neural Network which only accept the fixed size data. Hence, with the existing reshape layer the data could be fed into the networks [2].
 
 Pool layer
+
 Pooling layer refers to pooling which is an approach to down sampling feature maps by summarizing the presence of features in patches of the feature map. Average pooling and max pooling are two common pooling methods that summarize the average presence of a feature and the most activated presence of a feature respectively [3].
 
 Flatten layer
+
 Flattening involves transforming the entire pooled feature map matrix into a single column which is then fed to the neural network for processing [4].
 
 Dropout	
+
 Dropout is referring to the ignoring units during the training phase. It is an approach to regulation of Neural Network which would reduce interdependent learning. [5]. It is a technique that prevents overfitting and provides a way of approximately combining exponentially many different neural network architectures efficiently [6]. Figure 12 shows the visualization of Dropout technique. 
 
 <img width="253" alt="Screenshot 2023-02-12 182248" src="https://user-images.githubusercontent.com/92903308/218305471-0f736470-1bc9-4b8e-905d-5b9b86c12ac4.png">
@@ -161,7 +167,7 @@ In model testing, 61 audio data from different classes are included to test the 
 
 Retrain Model
 
-	In the retrain model, the model will be retrained with known parameters to improve the performance of the model and reduce loss. The result of the retrain model is shown as Figure 19. In addition, the accuracy of testing is improved after retraining the model. Figure 20 shows the result of testing, where the improvement is . 
+In the retrain model, the model will be retrained with known parameters to improve the performance of the model and reduce loss. The result of the retrain model is shown as Figure 19. In addition, the accuracy of testing is improved after retraining the model. Figure 20 shows the result of testing, where the improvement is . 
 
 ![WhatsApp Image 2023-02-12 at 4 26 52 PM](https://user-images.githubusercontent.com/92903308/218305689-d5717a42-87fa-4fd7-8cba-239b1720bc9d.jpeg)
 
@@ -170,6 +176,7 @@ Retrain Model
 The confusion matrix after retraining the model. After retraining the model, the model now performs better on recognizing “”, “”, “”, “” and “”.
 
 Deployment
+
 This section is to generate a source code and deploy it to the specified platform or device. The available options for the source code are as shown in Figure 18. Cube.MX CMSIS-PACK library is selected as the output source code. Then, a zip file will automatically be downloaded after it is finished built. 
 
 ![WhatsApp Image 2023-02-12 at 3 27 43 PM (2)](https://user-images.githubusercontent.com/92903308/218305804-7aa4f5b2-0274-4e05-b8c1-73574f650249.jpeg)
