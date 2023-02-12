@@ -185,8 +185,31 @@ This section is to generate a source code and deploy it to the specified platfor
 
 At last, the source code needs to be copied to the working directory of STMCubeIDE to perform real-time application with the Neural Network model.
 
+## 8.0 Discussion
 
-## 8.0 References
+Microphone is required to receive the real-time audio data.  The INMP441 is a high-performance, low power, digital output, omnidirectional MEMS microphone with a bottom port. Figure 29 shows the physical connection between INMP441 microphone and Nucleo-F446RE board. Table 4 tabulated the name and function of the pins respectively. However, the coding in Coding 1 is not working fine to print out any serial output in Putty. 
+The ideal implementation is that the classifier identifies the input sound from microphone and print the result of classification into serial monitor. If the sound detected is something dangerous like gun shot in the middle of a crowd, then LED would be light up, which will directly send a warning notification to security team so that they can act accordingly with the shortest response time. Figure 30 shows the snippet physical implementation on the application of environmental sound classifier using Nucleo-F446RE. The coding as shown in Coding 2 can print out the serial output in Putty. However, the microphone is not working fine to detect the real-time audio where the output in the serial port is always static.
+
+<img width="288" alt="image" src="https://user-images.githubusercontent.com/92903308/218306830-87f12c0c-525e-4ba8-b03d-60b1e4a98b0b.png">
+
+**Figure : INMP441 microphone**
+
+**Table 4: Function of pins**
+
+![image](https://user-images.githubusercontent.com/92903308/218306872-679dfeaa-115d-4d7b-b146-52137e6856e9.png)
+
+![WhatsApp Image 2023-02-12 at 4 17 22 PM](https://user-images.githubusercontent.com/92903308/218306951-fb00248e-5834-4768-bb94-29cefaca740d.jpeg)
+
+**Figure : The physical board implementation**
+
+
+## 11.0 Conclusion
+
+At the end of the project, majority of the objectives are considered achieved, although there is still one step towards the successful board implementation of real-time environmental sound classification. All the steps of STM32-CMSIS sound recognition implementation are fully applied and investigated, like data set collection, training model, familiarizing with STM32CubeIDE and microphone enabling. The most valuable experience obtained throughout this project, is the learning of microprocessor/machine related knowledge, and the co-operation of each team member to handle various issues faced.
+
+
+## 10.0 References
+
 1. Projects/Supervision (no date) Mun'im Zabidi. Available at: http://raden.fke.utm.my/projects (Accessed: January 7, 2023).
 2. Smales, M. (2021) Sound classification using Deep Learning, Medium. Medium. Available at: https://mikesmales.medium.com/sound-classification-using-deep-learning-8bc2aa1990b7 (Accessed: January 7, 2023).
 3. Zhang, Y. et al. (2018) Hello edge: Keyword spotting on microcontrollers, arXiv.org. Available at: https://arxiv.org/abs/1711.07128 (Accessed: January 7, 2023).
