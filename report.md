@@ -140,7 +140,7 @@ _Flatten layer_
 
 Flattening involves transforming the entire pooled feature map matrix into a single column which is then fed to the neural network for processing [4].
 
-_Dropout	_
+_Dropout_
 
 Dropout is referring to the ignoring units during the training phase. It is an approach to regulation of Neural Network which would reduce interdependent learning. [5]. It is a technique that prevents overfitting and provides a way of approximately combining exponentially many different neural network architectures efficiently [6]. Figure 12 shows the visualization of Dropout technique. 
 
