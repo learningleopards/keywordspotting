@@ -1,5 +1,7 @@
 # Keyword Spotting using Edge Impulse
 
+Table of contents
+
 #### Table of contents
 
 <br>
