@@ -60,7 +60,7 @@ Edge impulse is used to perform audio data classification. It is a very user-fri
 
 Edge Impulse is used to perform audio data classification. It is a very user-friendly application that allows the users to implement Neural Network algorithms without much coding knowledge. However, the users would still need to know what processing block, learning block to choose according to their dataset.
 
-Data Acquisition
+_Data Acquisition_
 
 In data acquisition, 61 audio files are uploaded to Edge Impulse for processing. The uploaded data are randomly picked from a downloaded Urban8kSound folder. The audio files included 8 classes of sound which are “Baby Sound”, “Car Ambulance”, “Car Horn”, “Dog Bark”, “Drilling”, “Engine Idling”, “Gun Shot” and “Sewing Machine”. After uploading the dataset, it can be split into training and testing categories. Then, the uploaded dataset must be labeled accordingly. Figure 1 shows the interface of uploading existing data. 
 
@@ -73,7 +73,7 @@ Figure 2 shows the separation of training data and test data. For audio dataset,
 
 **Figure 2: Data Acquisition**
 
-Impulse Design
+_Impulse Design_
 
 After that, the dataset is now ready to create impulse. Under the create impulse tab, the processing block and learning block are required to be defined. In the processing block, MFCC and Spectrogram are available for audio dataset. Figure 3 shows the available processing block in Edge Impulse. Spectrogram is using linear spaced frequency scale whereas MFCC is using quasi-logarithmic spaced frequency scale, which is more similar to how the human auditory system processes sounds [1]. MFCC is chosen due to its more distinguishable detail. Based on the research done, MFCC is more suitable to be applied on CNN models owing to its better result on validation and testing. Furthermore, there are three learning blocks available for different varieties of dataset. For example, Neural Network, Transfer Learning as well as K-mean Anomaly Detection. Figure 4 shows the available learning blocks in Edge Impulse. While Neural Network is chosen due to its great performance on recognizing audio. Last, the selected processing block and learning block need to be saved for the next stage process.
 ![WhatsApp Image 2023-02-12 at 3 27 39 PM (2)](https://user-images.githubusercontent.com/92903308/218304650-7d1d22e5-1727-4689-8574-ad1fc05861db.jpeg)
@@ -121,23 +121,23 @@ Next, define the Neural Network settings by modifying the number of training cyc
 
 **Figure 11: Neural Network settings**
 
-Input layer
+_Input layer_
 
 Input layer is the layer that consists of all the initial data for a neural network. 
 
-Reshape layer
+_Reshape layer_
 
 Reshape layer is a common practice to overcome the limitation of Neural Network which only accept the fixed size data. Hence, with the existing reshape layer the data could be fed into the networks [2].
 
-Pool layer
+_Pool layer_
 
 Pooling layer refers to pooling which is an approach to down sampling feature maps by summarizing the presence of features in patches of the feature map. Average pooling and max pooling are two common pooling methods that summarize the average presence of a feature and the most activated presence of a feature respectively [3].
 
-Flatten layer
+_Flatten layer_
 
 Flattening involves transforming the entire pooled feature map matrix into a single column which is then fed to the neural network for processing [4].
 
-Dropout	
+_Dropout	_
 
 Dropout is referring to the ignoring units during the training phase. It is an approach to regulation of Neural Network which would reduce interdependent learning. [5]. It is a technique that prevents overfitting and provides a way of approximately combining exponentially many different neural network architectures efficiently [6]. Figure 12 shows the visualization of Dropout technique. 
 
@@ -159,7 +159,7 @@ Dropout is referring to the ignoring units during the training phase. It is an a
 
 Figure 14 shows the training process that is run by the model. Figure 15 shows the confusion matrix for all 8 classes of urban sounds. The top 3 classes that the model recognized were better for “Car Ambulance”, “Engine Idling” and “Drilling”, which are 100%, 100% and 71.4%. Overall, the training performance is as high as 58.5% accuracy with 2.01 loss as shown in Figure 15. 
 
-Model testing
+_Model testing_
 
 In model testing, 61 audio data from different classes are included to test the accuracy of the model. Figure 16 shows the result of model testing where the accuracy is 42.59%. 
 
@@ -168,7 +168,7 @@ In model testing, 61 audio data from different classes are included to test the 
 **Figure 16: Test data**
 
 
-Retrain Model
+_Retrain Model_
 
 In the retrain model, the model will be retrained with known parameters to improve the performance of the model and reduce loss. The result of the retrain model is shown as Figure 17.  
 
@@ -178,7 +178,7 @@ In the retrain model, the model will be retrained with known parameters to impro
 
 The confusion matrix after retraining the model.
 
-Deployment
+_Deployment_
 
 This section is to generate a source code and deploy it to the specified platform or device. The available options for the source code are as shown in Figure 18. Cube.MX CMSIS-PACK library is selected as the output source code. Then, a zip file will automatically be downloaded after it is finished built. 
 
