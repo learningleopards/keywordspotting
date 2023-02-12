@@ -216,12 +216,18 @@ At the end of the project, majority of the objectives are considered achieved, a
 ## 10.0 References
 
 [1] M. Smales, "Sound Classification using Deep Learning," 27 Feb 2019. [Online]. Available: https://mikesmales.medium.com/sound-classification-using-deep-learning-8bc2aa1990b7. [Accessed 26 Jan 2021].
+
 [2] N. D. Swarnendu Ghosh, "Reshaping inputs for convolutional neural network: Some common," Pattern Recognition, vol. 93, pp. 79-94, 2019. 
+
 [3] J. Brownlee, "A Gentle Introduction to Pooling Layers for Convolutional Neural Networks," 5 July 2019. [Online]. Available: https://machinelearningmastery.com/pooling-layers-for-convolutional-neural-networks/. [Accessed 26 January 2021].
+
 [4] D. Mwiti, "Convolutional Neural Networks: An Intro Tutorial," 8 May 2018. [Online]. Available: https://heartbeat.fritz.ai/a-beginners-guide-to-convolutional-neural-networks-cnn-cf26c5ee17ed#:~:text=Flatten%20is%20the%20function%20that,layer%20to%20the%20neural%20network.. [Accessed 26 January 2021].
+
 [5] A. Budhiraja, "Dropout in (Deep) Machine Learning," 16 December 2016. [Online]. Available: https://medium.com/@amarbudhiraja/https-medium-com-amarbudhiraja-learning-less-to-learn-better-dropout-in-deep-machine-learning-74334da4bfc5. [Accessed 26 January 2021].
+
 [6] G. H. A. K. I. S. R. S. Nitish Srivastava, "Dropout: A Simple Way to Prevent Neural Networks from," Journal of Machine Learning Research 15, no. 6/14, p. 1930, 2014. 
+
 [7] Projects/Supervision (no date) Mun'im Zabidi. Available at: http://raden.fke.utm.my/projects (Accessed: January 7, 2023).
 2Smales, M. (2021) Sound classification using Deep Learning, Medium. Medium. Available at: https://mikesmales.medium.com/sound-classification-using-deep-learning-8bc2aa1990b7 (Accessed: January 7, 2023).
-[8] Zhang, Y. et al. (2018) Hello edge: Keyword spotting on microcontrollers, arXiv.org. Available at: https://arxiv.org/abs/1711.07128 (Accessed: January 7, 2023).
 
+[8] Zhang, Y. et al. (2018) Hello edge: Keyword spotting on microcontrollers, arXiv.org. Available at: https://arxiv.org/abs/1711.07128 (Accessed: January 7, 2023).
