@@ -1,3 +1,4 @@
 - 👋 **Group Name:** Learning Leopards
 - 👀 **Group Members:** Deveepria A/P Sankaran, Nur Irdina binti Mohd Shahrir, Thulasy A/P Chandran
+- 📫 **Report:** https://github.com/learningleopards/keywordspotting/blob/main/report.md#keyword-spotting-using-edge-impulse
 - 💞️ **Youtube:** https://youtu.be/LfWFZ_AR09k
