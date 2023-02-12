@@ -18,9 +18,13 @@ Table of contents
 
 [6.0 Algorithm](#60-algorithm)
 
-[7.0 Discussion](#70-discussion)
+[7.0 Methodology](#70-methodology)
 
-[8.0 References](#80-references)
+[8.0 Discussion](#80-discussion)
+
+[9.0 Conclusion](#90-conclusion)
+
+[10.0 References](#100-references)
 
 
 ## 1.0 Introduction
@@ -203,7 +207,7 @@ The ideal implementation is that the classifier identifies the input sound from 
 **Figure : The physical board implementation**
 
 
-## 11.0 Conclusion
+## 9.0 Conclusion
 
 At the end of the project, majority of the objectives are considered achieved, although there is still one step towards the successful board implementation of real-time environmental sound classification. All the steps of STM32-CMSIS sound recognition implementation are fully applied and investigated, like data set collection, training model, familiarizing with STM32CubeIDE and microphone enabling. The most valuable experience obtained throughout this project, is the learning of microprocessor/machine related knowledge, and the co-operation of each team member to handle various issues faced.
 
