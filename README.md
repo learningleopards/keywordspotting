@@ -1,10 +1,8 @@
 # Keyword Spotting using Edge Impulse
 
-Table of contents
 
 #### Table of contents
 
-<br>
 
 [1.0 Introduction](#10-introduction)
 
