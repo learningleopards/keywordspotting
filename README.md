@@ -58,6 +58,7 @@ Edge impulse is used to perform audio data classification. It is a very user-fri
 Edge Impulse is used to perform audio data classification. It is a very user-friendly application that allows the users to implement Neural Network algorithms without much coding knowledge. However, the users would still need to know what processing block, learning block to choose according to their dataset.
 
 Data Acquisition
+
 In data acquisition, 61 audio files are uploaded to Edge Impulse for processing. The uploaded data are randomly picked from a downloaded Urban8kSound folder. The audio files included 8 classes of sound which are “Baby Sound”, “Car Ambulance”, “Car Horn”, “Dog Bark”, “Drilling”, “Engine Idling”, “Gun Shot” and “Sewing Machine”. After uploading the dataset, it can be split into training and testing categories. Then, the uploaded dataset must be labeled accordingly. Figure 1 shows the interface of uploading existing data. 
 
 ![WhatsApp Image 2023-02-12 at 3 27 39 PM](https://user-images.githubusercontent.com/92903308/218303725-777e4046-5a1d-4d7b-81b3-e616fabe5c25.jpeg)
@@ -87,8 +88,7 @@ Mel Frequency Cepstral Coefficients are customizable by defining the available p
 
 ![WhatsApp Image 2023-02-12 at 3 27 40 PM (1)](https://user-images.githubusercontent.com/92903308/218304911-f2d0efc8-4ad5-4ef9-8a04-b06ec583ce37.jpeg)
 
-**Figure 6: Parameters of Mel Frequency Cepstral Coefficients
-**
+**Figure 6: Parameters of Mel Frequency Cepstral Coefficients**
 
 Figure 7 represents the signal form of one audio data. Other audio data could be surfed by selecting through the drop box. Figure 8 represents the Cepstral Coefficients of the highlighted region of the signal. 
 
@@ -115,8 +115,7 @@ Next, define the Neural Network settings by modifying the number of training cyc
 
 ![WhatsApp Image 2023-02-12 at 3 27 42 PM](https://user-images.githubusercontent.com/92903308/218305387-61d5ed1e-ea8d-4c97-a83c-cff6065b8f57.jpeg)
 
-**Figure 11: Neural Network settings
-**
+**Figure 11: Neural Network settings**
 
 Input layer
 	Input layer is the layer that consists of all the initial data for a neural network. 
@@ -139,8 +138,7 @@ Dropout is referring to the ignoring units during the training phase. It is an a
 
 ![WhatsApp Image 2023-02-12 at 3 27 42 PM (1)](https://user-images.githubusercontent.com/92903308/218305516-446f2f07-2439-4a81-9155-91a8d6702dff.jpeg)
 
-**Figure 13: Neural Network architecture
-**
+**Figure 13: Neural Network architecture**
 
 ![WhatsApp Image 2023-02-12 at 3 27 43 PM](https://user-images.githubusercontent.com/92903308/218305550-6563d552-66a8-486c-8797-03a6ec5ac900.jpeg)
 
