@@ -160,6 +160,10 @@ Dropout is referring to the ignoring units during the training phase. It is an a
 
 **Figure 15: Training Performance**
 
+![WhatsApp Image 2023-02-19 at 8 36 28 PM](https://user-images.githubusercontent.com/92903308/220098692-7ca3d262-812c-44bb-9568-a4aa664092b3.jpeg)
+
+**Figure 16: Data Explorer**
+
 Figure 14 shows the training process that is run by the model. Figure 15 shows the confusion matrix for all 8 classes of urban sounds. The top 3 classes that the model recognized were better for “Car Ambulance”, “Engine Idling” and “Drilling”, which are 100%, 100% and 71.4%. Overall, the training performance is as high as 58.5% accuracy with 2.01 loss as shown in Figure 15. 
 
 _Model testing_
@@ -168,7 +172,7 @@ In model testing, 61 audio data from different classes are included to test the 
 
 ![WhatsApp Image 2023-02-12 at 3 27 43 PM (1)](https://user-images.githubusercontent.com/92903308/218305725-858fd0ee-345f-4e9b-9194-6c9e7aa64c33.jpeg)
 
-**Figure 16: Test data**
+**Figure 17: Test data**
 
 
 _Retrain Model_
@@ -193,7 +197,7 @@ At last, the source code needs to be copied to the working directory of STMCubeI
 
 ## 8.0 Discussion
 
-Microphone is required to receive the real-time audio data.  The INMP441 is a high-performance, low power, digital output, omnidirectional MEMS microphone with a bottom port. Figure 19 shows the physical connection between INMP441 microphone and Nucleo-F446RE board. Table 1 tabulated the name and function of the pins respectively. The coding can print out the serial output in Putty. However, the microphone is not detecting the sound fine to detect the real-time audio where the output in the serial port is always static. The most valuable experience obtained throughout this project, is the learning of stm32 microcontroller related knowledge, AI through edge impulse implementation and the co-operation of each team member to handle various issues faced. Figure 20 shows the snippet physical implementation on the application of environmental sound classifier using Nucleo-F446RE. The coding as shown in Coding 2 can print out the serial output in Putty. However, the microphone is not working fine to detect the real-time audio where the output in the serial port is always static.
+Microphone is required to receive the real-time audio data.  The INMP441 is a high-performance, low power, digital output, omnidirectional MEMS microphone with a bottom port. Figure 19 shows the physical connection between INMP441 microphone and Nucleo-F446RE board. Table 1 tabulated the name and function of the pins respectively. The coding can print out the serial output in Putty. However, the microphone is not detecting the sound fine to detect the real-time audio where the output in the serial port is always static. The most valuable experience obtained throughout this project, is the learning of stm32 microcontroller related knowledge, AI through edge impulse implementation and the co-operation of each team member to handle various issues faced. Figure 20 shows the snippet physical implementation on the application of environmental sound classifier using Nucleo-F446RE. The coding as shown in Coding 2 can print out the serial output in Putty.
 
 <img width="288" alt="image" src="https://user-images.githubusercontent.com/92903308/218306830-87f12c0c-525e-4ba8-b03d-60b1e4a98b0b.png">
 
