@@ -22,6 +22,10 @@ _This report characterizes the keyword spotting using edge impulse_
 
 [7.0 Methodology](#70-methodology)
 
+> [7.1 Data Acquisition](#71-data-acquisition)
+> 
+> [7.2 Hardware Configuration and Implementation using STM32CubeIDE](#72-hardware-configuration-and-implementation-using-STM32CubeIDE)
+
 [8.0 Discussion](#80-discussion)
 
 [9.0 Conclusion](#90-conclusion)
@@ -63,7 +67,7 @@ Edge impulse is used to perform audio data classification. It is a very user-fri
 
 Edge Impulse is used to perform audio data classification. It is a very user-friendly application that allows the users to implement Neural Network algorithms without much coding knowledge. However, the users would still need to know what processing block, learning block to choose according to their dataset.
 
-_Data Acquisition_
+## 7.1 Data Acquisition
 
 In data acquisition, 61 audio files are uploaded to Edge Impulse for processing. The uploaded data are randomly picked from a downloaded Urban8kSound folder. The audio files included 8 classes of sound which are “Baby Sound”, “Car Ambulance”, “Car Horn”, “Dog Bark”, “Drilling”, “Engine Idling”, “Gun Shot” and “Sewing Machine”. After uploading the dataset, it can be split into training and testing categories. Then, the uploaded dataset must be labeled accordingly. Figure 1 shows the interface of uploading existing data. 
 
@@ -195,7 +199,7 @@ This section is to generate a source code and deploy it to the specified platfor
 
 At last, the source code needs to be copied to the working directory of STMCubeIDE to perform real-time application with the Neural Network model.
 
-_Hardware Configuration and Implementation using STM32CubeIDE_
+## 7.2 Hardware Configuration and Implementation using STM32CubeIDE
 
 In this project, we have enabled few interface categories, including GPIO, SAI(Serial Audio Interface) and USART2(Universal Synchronous/Asynchronous Receiver/Transmitter). Only one GPIO PB3 is enabled, it is connected to a LED to indicate output. SAI is a protocol allow the STM32 microcontroller to communicate with audio device and other ADC/DAC. In this project, SAI serves as the agent to convert environmental sound to digital bits to be analyzed by the classifier in the microcontroller. Figure 23 below is showing the pin/port of the boards, whereas Figure 24 is showing the SAI and GPIO pins enabled in the project.ioc configuration file.
 
