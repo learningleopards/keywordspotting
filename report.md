@@ -195,22 +195,60 @@ This section is to generate a source code and deploy it to the specified platfor
 
 At last, the source code needs to be copied to the working directory of STMCubeIDE to perform real-time application with the Neural Network model.
 
-## 8.0 Discussion
+_Hardware Configuration and Implementation using STM32CubeIDE_
 
-Microphone is required to receive the real-time audio data.  The INMP441 is a high-performance, low power, digital output, omnidirectional MEMS microphone with a bottom port. Figure 19 shows the physical connection between INMP441 microphone and Nucleo-F446RE board. Table 1 tabulated the name and function of the pins respectively. The coding can print out the serial output in Putty. However, the microphone is not detecting the sound fine to detect the real-time audio where the output in the serial port is always static. The most valuable experience obtained throughout this project, is the learning of stm32 microcontroller related knowledge, AI through edge impulse implementation and the co-operation of each team member to handle various issues faced. Figure 20 shows the snippet physical implementation on the application of environmental sound classifier using Nucleo-F446RE. The coding for serial communication can print out the serial output in Putty.
+In this project, we have enabled few interface categories, including GPIO, SAI(Serial Audio Interface) and USART2(Universal Synchronous/Asynchronous Receiver/Transmitter). Only one GPIO PB3 is enabled, it is connected to a LED to indicate output. SAI is a protocol allow the STM32 microcontroller to communicate with audio device and other ADC/DAC. In this project, SAI serves as the agent to convert environmental sound to digital bits to be analyzed by the classifier in the microcontroller. Figure 23 below is showing the pin/port of the boards, whereas Figure 24 is showing the SAI and GPIO pins enabled in the project.ioc configuration file.
+
+<img width="270" alt="Screenshot 2023-02-22 215204" src="https://user-images.githubusercontent.com/92903308/220639965-d77c1c8e-51b7-40fd-a6a6-fa080217cf65.png">
+
+**Figure 19: The Nucleo-F446RE interface**
+
+<img width="473" alt="Screenshot 2023-02-22 215330" src="https://user-images.githubusercontent.com/92903308/220640349-bee71614-3f0b-492e-a4c5-b78df0dfb806.png">
+
+**Figure 20: The IO configuration in project.ioc file**
+
+From the hardware connectivity perspective, Table 1 is showing the mapping between the board’s interface with the Microphone.
+
+**Table 1: The connection between board and Mic/LED**
+
+<img width="226" alt="image" src="https://user-images.githubusercontent.com/92903308/220640752-ee4e774c-f0da-40ce-aebe-b13064e5c429.png">
+
+The original code is referred to and obtained from the open source github page. After importing the code into STM32CubeIDE, the model-parameter and tflite-model directories are replaced with the output of the trained model . The output model contains the libraries that are able to recognize the 8 categories of environmental sound. 
+
+Then the next step will be including the header files like dsp_block.h and model_metadata.h from model-parameter into the project directory. After done for the model-parameter directory, the same step is repeated to include the .h files within the tflite-model directory. After that, we should be able to start editing the code within the ‘int main(void)’ function to add the user code, in the middle pane shown in Figure 21. After editing the user code, should be able to proceed to build the project. At the top toolbar, select Project > Build Configurations > Set Active > Release. Then, select Project > Build Project. Then the code should be compiled after a short waiting time. If there is a change in the project.ioc file, this build stage will regenerate the peripheral library codes according to the interface category enabled. For example, if SAI is enabled, the HAL function like HAL_SAI_Receive_DMA will be enabled, so it can be used to perform the sound receiving function.
+
+<img width="481" alt="image" src="https://user-images.githubusercontent.com/92903308/220641461-b519263d-f1eb-4f7e-a449-895f3ea330f5.png">
+
+**Figure 21: The STM32CubeIDE main work area**
+
+Moving forward, bringing up the serial monitor to check the output printed and the result of classification. The serial monitor used here is Putty, the baud rate of the serial communication should be equal to the baud rate set in the USART2, else the output printed in the serial monitor will be corrupted and unreadable. 
+
+
+## 8.0 Results and Discussion
+
+Microphone is required to receive the real-time audio data.  The INMP441 is a high-performance, low power, digital output, omnidirectional MEMS microphone with a bottom port. Figure 22 shows the physical connection between INMP441 microphone and Nucleo-F446RE board. Table 2 tabulated the name and function of the pins respectively. The coding can print out the serial output in Putty. The most valuable experience obtained throughout this project, is the learning of stm32 microcontroller related knowledge, AI through edge impulse implementation and the co-operation of each team member to handle various issues faced. Figure 23 shows the snippet physical implementation on the application of environmental sound classifier using Nucleo-F446RE. The coding for serial communication can print out the serial output in Putty.
 
 <img width="288" alt="image" src="https://user-images.githubusercontent.com/92903308/218306830-87f12c0c-525e-4ba8-b03d-60b1e4a98b0b.png">
 
-**Figure 19: INMP441 microphone**
+**Figure 22: INMP441 microphone**
 
-**Table 1: Function of pins**
+**Table 2: Function of pins**
 
 ![image](https://user-images.githubusercontent.com/92903308/218306872-679dfeaa-115d-4d7b-b146-52137e6856e9.png)
 
 ![WhatsApp Image 2023-02-12 at 4 17 22 PM](https://user-images.githubusercontent.com/92903308/218306951-fb00248e-5834-4768-bb94-29cefaca740d.jpeg)
 
-**Figure 20: The physical board implementation**
+**Figure 23: The physical board implementation**
 
+At the end of this project, the classifier from the edge-impulse is trying to perform the classification. Figure 24 shows the output printed. It shows the environmental sound detected real-time, which is after the interpretation of the classifier, mostly is categorized under “Car Horn”
+
+<img width="271" alt="image" src="https://user-images.githubusercontent.com/92903308/220644090-541e186d-5d54-4baa-a73f-e7d6af227d44.png">
+
+**Figure 24: Serial Monitor printing the result of classification**
+
+The serial monitor output is showing the guess of the classifier on the input sound. In this case, the classifier did a guess and conclude that the current input sound most likely is ‘Car Horn’, with a 38% of confidence. We are able to get the correct output as we played an audio of "Car Horn" sound.
+
+Putting this project in the context of practical implementation, the end products could be beneficiary to fields like security and health. One of an application in the security field, is the police surveillance system that can be installed in any corner of a street.  One of the categories of sound included in the trained data set, is the gun-shot sound. Not necessarily gun-shot sound, it could also be some sound like high pitch screaming, or any other sound that signify dangerous. After the microcontroller detected there’s such sound in the middle of crowd, concert, food court or bank, then the microcontroller, which is linked to internet, will send a warning to the nearest police station or security center to get help. This enhancement has eliminated the need of people to manually dial 999 and have a survey-like conversation with the police officer, which is tedious. Another field which the environmental sound classification comes into use is the residential noise level indicator. This project can be installed at the front door of each house, so that it can record the surrounding noise level and indicates whether it will cause any harm to wellbeing of residents both physically and mentally. Beside these, the environmental sound classifier should also have high demand in industry and automotive. 
 
 ## 9.0 Conclusion
 
